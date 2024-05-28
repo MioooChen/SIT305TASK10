@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_background"
+    android:layout_height="match_parent">
+
+    <!-- 标题1 -->
+    <TextView
+        android:id="@+id/text_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <!-- 标题2 -->
+    <TextView
+        android:id="@+id/text_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interests"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/text_title1"/>
+
+    <!-- 标题3 -->
+    <TextView
+        android:id="@+id/text_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You may select up to 10 topics"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/text_title2"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/text_title3"
+        android:layout_above="@id/btn_next">
+
+        <com.google.android.flexbox.FlexboxLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap"
+            app:alignItems="stretch"
+            android:id="@+id/flexbox"
+            app:alignContent="stretch" >
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </ScrollView>
+
+    <!-- Next 按钮 -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

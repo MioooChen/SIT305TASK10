@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets get you"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_welcome"
+        android:layout_marginBottom="16dp"
+        android:text="Setup!"
+        android:textColor="@color/black"
+        android:textSize="46sp"
+        android:textStyle="bold" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/text_subtitle"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar"
+        app:riv_corner_radius="60dp"
+        app:riv_oval="true" />
+
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignRight="@id/image_avatar"
+        android:layout_alignBottom="@id/image_avatar"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/add" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_below="@id/image_avatar"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Email 输入框 -->
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:layout_below="@id/edit_username"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Confirm Email 输入框 -->
+    <EditText
+        android:id="@+id/edit_confirm_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Email"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:layout_below="@id/edit_email"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Password 输入框 -->
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_below="@id/edit_confirm_email"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Confirm Password 输入框 -->
+    <EditText
+        android:id="@+id/edit_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_below="@id/edit_password"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Phone Number 输入框 -->
+    <EditText
+        android:id="@+id/edit_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:layout_below="@id/edit_confirm_password"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Create New Account 按钮 -->
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Account"
+        android:background="@drawable/button_background"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:layout_below="@id/edit_phone_number"/>
+
+</RelativeLayout>
